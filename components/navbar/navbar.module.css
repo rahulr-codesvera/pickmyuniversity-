@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem 1rem 3rem;
+}
+.navItem {
+  margin: 0 1rem;
+}
