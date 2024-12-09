@@ -5,12 +5,10 @@ import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import styles from "./navbar.module.css";
 
@@ -72,7 +70,7 @@ const Navbar = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <button></button>
+      <button className={styles.button}>Contact Us</button>
     </div>
   );
 };

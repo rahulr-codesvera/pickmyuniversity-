@@ -1,0 +1,80 @@
+.formContainer {
+  position: relative;
+  background-color: white;
+  padding: 1.5rem;
+  width: 100%;
+  min-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.formPattern {
+  position: absolute;
+  top: -75px;
+  right: -75px;
+}
+
+.formHeader {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.mbbs {
+  color: transparent;
+  background: var(--gradient-bg);
+  background: var(--gradient);
+  background-clip: text;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formSection {
+  display: flex;
+  gap: 1rem;
+}
+
+.input {
+  background-color: #ffeacc;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.select {
+  background-color: #ffeacc;
+  padding: 0.5rem;
+}
+
+.textArea {
+  background-color: #ffeacc;
+  padding: 0.5rem;
+  min-height: 10rem;
+  resize: none;
+}
+
+.submission {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formSubmit {
+  background: var(--gradient);
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
