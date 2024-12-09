@@ -19,8 +19,7 @@ const ContactForm = () => {
         height={150}
       />
       <h3 className={styles.formHeader}>
-        Your <span className={styles.mbbs}>MBBS dream</span> is just a click{" "}
-        <br />
+        Your <span className={styles.mbbs}>MBBS dream</span> is just a click
         away
       </h3>
       <form className={styles.form} action={formAction} id="contactForm">

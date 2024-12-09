@@ -46,6 +46,11 @@
   width: 100%;
 }
 
+.input:focus,
+.textArea:focus {
+  outline: none;
+}
+
 .select {
   background-color: #ffeacc;
   padding: 0.5rem;
@@ -77,4 +82,33 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media (width<1200px) {
+  .formContainer {
+    width: 100%;
+    min-width: 28rem;
+  }
+  .formHeader {
+    font-size: 1.5rem;
+  }
+}
+
+@media (width<1010px) {
+  .formContainer {
+    width: 100%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.436);
+  }
+}
+
+@media (width<600px) {
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .formContainer {
+    width: 100%;
+    min-width: 10rem;
+  }
 }

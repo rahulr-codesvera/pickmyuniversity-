@@ -51,6 +51,10 @@
     );
     --primary-font: "Clash", sans-serif;
     --secondary-font: "Inter", sans-serif;
+    --heading-size: 3rem;
+    --heading-weight: 600;
+    --padding-x: 5rem;
+    --padding-y: 5rem;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -85,5 +89,30 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@media (width<1000px) {
+  :root {
+    --heading-size: 2rem;
+    --heading-weight: 500;
+    --padding-x: 2rem;
+    --padding-y: 3rem;
+  }
+}
+@media (width<778px) {
+  :root {
+    --heading-size: 1.5rem;
+    --heading-weight: 500;
+    --padding-x: 1.5rem;
+    --padding-y: 3rem;
+  }
+}
+
+@media (width<548px) {
+  :root {
+    --heading-weight: 500;
+    --padding-x: 1rem;
+    --padding-y: 2rem;
   }
 }

@@ -37,7 +37,30 @@ const Banner = () => {
         </div>
       </section>
       <div className={styles.content}>
-        <div className={styles.left}></div>
+        <div className={styles.left}>
+          <div className={styles.studentsPlaced}>
+            <div className={styles.studentsImages}>
+              <Image
+                className={styles.studentsGallery}
+                src="/assets/studentsPlaced.png"
+                alt="students placed"
+                fill
+              />
+            </div>
+            <p className={styles.placed}>15K+ Students Placed</p>
+          </div>
+          <div className={styles.bannerContent}>
+            <h1 className={styles.bannerHeading}>
+              Study <span className={styles.bannerGradient}>MBBS</span>{" "}
+              Internationally-
+              <br />
+              Budget Friendly at 2 Lakhs
+            </h1>
+            <h2 className={styles.bannerSubheading}>
+              Your MBBS dream starts here!
+            </h2>
+          </div>
+        </div>
         <div className={styles.right}>
           <ContactForm />
         </div>
