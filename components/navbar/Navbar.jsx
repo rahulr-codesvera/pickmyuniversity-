@@ -34,9 +34,9 @@ const Navbar = () => {
             </a>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink className={styles.navItem} href="/gallery">
+            <Link className={styles.navItem} href="/gallery">
               Gallery
-            </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className={styles.navItem}>
