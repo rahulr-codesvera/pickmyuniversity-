@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  min-height: 100vh;
+  margin-top: 5rem;
+  padding: var(--padding-y) var(--padding-x);
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+.right {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.aboutImg {
+  object-fit: contain;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: var(--icon-width);
+}
+.titleHeading {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: var(--title-font-size);
+}
+.sectionHeading {
+  font-family: var(--primary-font);
+  font-size: var(--heading-font-size);
+  font-weight: 600;
+}
+
+.textContent {
+  font-family: var(--secondary-font);
+  font-size: var(--text-font-size);
+}
+
+.button {
+  background: var(--gradient-bg);
+  background: var(--gradient);
+  padding: 1rem 2rem;
+  font-family: var(--primary-font);
+  font-weight: 500;
+}
+
+.statsBox {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  display: flex;
+  gap: 0.5rem;
+  width: fit-content;
+  align-items: center;
+}
+
+.statImg {
+  width: 4rem;
+}
+
+.statData {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.statData h5 {
+  display: inline-block;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.statData p {
+  display: inline-block;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+@media (width<1200px) {
+  .container {
+    flex-direction: column;
+  }
+  .left {
+    align-items: center;
+    flex: 0;
+  }
+  .textContent {
+    text-align: center;
+  }
+}
+
+@media (width<800px) {
+  .laptopScreen {
+    width: 80%;
+  }
+}
+
+@media (width<800px) {
+  .laptopScreen {
+    padding-bottom: 0.5rem;
+  }
+  .right {
+    align-items: flex-start;
+  }
+}
+
+@media (width<600px) {
+  .statImg {
+    width: 3rem;
+  }
+  .statData h5 {
+    font-size: 1.2rem;
+  }
+
+  .statData p {
+    font-size: 1rem;
+  }
+}
+@media (width<450px) {
+  .statImg {
+    width: 2rem;
+  }
+  .statsBox {
+    justify-content: space-evenly;
+  }
+  .statData h5 {
+    font-size: 1rem;
+  }
+
+  .statData p {
+    font-size: 0.8rem;
+  }
+}

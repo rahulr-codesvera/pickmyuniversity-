@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useActionState } from "react";
+import React, { useActionState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./ContactForm.module.css";
 import { useFormStatus } from "react-dom";
@@ -78,6 +78,7 @@ const ContactForm = () => {
 
 const SubmitButton = () => {
   const status = useFormStatus();
+
   return (
     <button
       type="submit"

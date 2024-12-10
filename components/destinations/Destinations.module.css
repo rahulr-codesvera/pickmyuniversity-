@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: 4rem;
-  min-height: 100vh;
+  height: fit-content;
   padding: var(--padding-y) var(--padding-x);
 }
 
