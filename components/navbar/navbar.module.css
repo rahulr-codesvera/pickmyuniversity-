@@ -1,10 +1,19 @@
 .container {
   width: 100%;
+  height: fit-content;
+}
+
+.navbarContainer {
+  width: 100%;
   min-height: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 7rem 1rem 7rem;
+}
+
+.mobNav {
+  display: none;
 }
 .navItem {
   margin: 0 1rem;
@@ -15,4 +24,15 @@
   padding: 1rem 2rem;
   font-family: var(--primary-font);
   font-weight: 500;
+}
+
+@media (width<1010px) {
+  .navbarContainer {
+    display: none;
+  }
+  .mobNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
