@@ -18,6 +18,7 @@ const Banner = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
   return (
     <div className={styles.container}>
+      <div className={styles.overlay}></div>
       <section className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">

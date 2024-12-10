@@ -55,6 +55,9 @@
     --heading-weight: 600;
     --padding-x: 5rem;
     --padding-y: 5rem;
+    --title-font-size: 1.2rem;
+    --heading-font-size: 3rem;
+    --icon-width: 2rem;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -98,6 +101,7 @@
     --heading-weight: 500;
     --padding-x: 2rem;
     --padding-y: 3rem;
+    --heading-font-size: 2rem;
   }
 }
 @media (width<778px) {
@@ -106,6 +110,8 @@
     --heading-weight: 500;
     --padding-x: 1.5rem;
     --padding-y: 3rem;
+    --title-font-size: 1rem;
+    --heading-font-size: 1.5rem;
   }
 }
 
@@ -114,5 +120,8 @@
     --heading-weight: 500;
     --padding-x: 1rem;
     --padding-y: 2rem;
+    --title-font-size: 0.8rem;
+    --heading-font-size: 1rem;
+    --icon-width: 1.2rem;
   }
 }
