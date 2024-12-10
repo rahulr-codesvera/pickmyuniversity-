@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  min-height: 100vh;
+  padding: var(--padding-y) var(--padding-x);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex: 2;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: var(--icon-width);
+}
+.titleHeading {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: var(--title-font-size);
+}
+.sectionHeading {
+  font-family: var(--primary-font);
+  font-size: var(--heading-font-size);
+  font-weight: 600;
+}
+
+.textContent {
+  font-family: var(--secondary-font);
+  font-size: var(--text-font-size);
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 80%;
+}
+
+.countryLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  transition: padding-right 0.2s ease;
+  padding: 0.5rem 1.2rem;
+  color: white;
+}
+.countryLink:hover {
+  padding-right: 0.5rem;
+}
+
+.countryLink:nth-child(1) {
+  background: rgb(255, 55, 0);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 55, 0, 0.69) 0%,
+    rgba(232, 157, 44, 0.69) 100%
+  );
+}
+
+.countryLink:nth-child(2) {
+  background: rgb(25, 150, 234);
+  background: linear-gradient(
+    145deg,
+    rgba(25, 150, 234, 1) 0%,
+    rgba(13, 247, 240, 1) 100%
+  );
+}
+.countryLink:nth-child(3) {
+  background: rgb(54, 106, 246);
+  background: linear-gradient(
+    145deg,
+    rgba(54, 106, 246, 1) 0%,
+    rgba(150, 134, 255, 1) 100%
+  );
+}
+
+.right {
+  flex: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.laptopScreen {
+  position: relative;
+  display: flex;
+  /* width: fit-content;
+  height: fit-content; */
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
+  border: 2px solid rgb(128, 128, 128);
+  background-color: black;
+  border-radius: 10px 10px 0 0;
+}
+.laptopBase {
+  position: absolute;
+  bottom: -15px;
+  width: 115%;
+}
+
+.video {
+  /* min-width: 40rem; */
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+@media (width<1200px) {
+  .container {
+    flex-direction: column;
+  }
+  .left {
+    align-items: center;
+  }
+  .textContent {
+    text-align: center;
+  }
+}
+
+@media (width<800px) {
+  .laptopScreen {
+    width: 80%;
+  }
+}
+
+@media (width<800px) {
+  .laptopScreen {
+    padding-bottom: 0.5rem;
+  }
+  .right {
+    align-items: flex-start;
+  }
+}

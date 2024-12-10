@@ -12,7 +12,7 @@ const Partners = () => {
             src="/assets/partneredWith.png"
             alt="Partnered universities"
           />
-          <p className={styles.partneredWith}>Partnered with</p>
+          <p className={styles.titleHeading}>Partnered with</p>
         </div>
         <h3 className={styles.sectionHeading}>
           Trusted partnership with leading medical
