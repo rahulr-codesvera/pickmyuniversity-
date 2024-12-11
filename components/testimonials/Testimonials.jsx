@@ -73,10 +73,10 @@ const Testimonials = () => {
                           />
                         </div>
                         <p className={styles.testimonialsContent}>
-                          "I've been consistently impressed with the quality of
-                          service provided by this website. They have exceeded
-                          my expectations and delivered exceptional results.
-                          Highly recommended!"
+                          &quot;I've been consistently impressed with the
+                          quality of service provided by this website. They have
+                          exceeded my expectations and delivered exceptional
+                          results. Highly recommended!&quot;
                         </p>
                       </div>
                     </CardContent>
