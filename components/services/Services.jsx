@@ -76,8 +76,8 @@ const Services = () => {
           Simplifying your MBBS journey across borders
         </h3>
         <p className={styles.textContent}>
-          Explore opportunities in Russia, Georgia, and Kyrgyzstan, where
-          world-class education meets affordability and cultural diversity.{" "}
+          From application to arrival, experience a smooth transition with
+          expert guidance tailored for aspiring MBBS students.
         </p>
       </div>
       <div className={styles.carouselBox}>

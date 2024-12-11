@@ -36,6 +36,7 @@
 .textContent {
   font-family: var(--secondary-font);
   font-size: var(--text-font-size);
+  text-align: center;
 }
 
 .carouselBox {
