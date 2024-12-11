@@ -1,0 +1,40 @@
+.container {
+  padding: var(--padding-y) var(--padding-x);
+  margin-top: 15rem;
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.addrContainer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #1c60df;
+  height: 22rem;
+  width: 100%;
+  overflow: visible;
+  border-radius: 20px;
+}
+
+.left {
+  position: relative;
+  width: 100%;
+}
+
+.imgContainer {
+  min-height: 30rem;
+  position: absolute;
+  width: 25rem;
+  bottom: 0;
+  left: 10%;
+}
+
+.img {
+  object-fit: contain;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
