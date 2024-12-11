@@ -12,21 +12,23 @@
   background-color: #1c60df;
   height: 22rem;
   width: 100%;
+  gap: 2rem;
   overflow: visible;
   border-radius: 20px;
 }
 
 .left {
   position: relative;
-  width: 100%;
+  flex: 1;
+  height: 100%;
 }
 
 .imgContainer {
-  min-height: 30rem;
+  height: 30rem;
   position: absolute;
   width: 25rem;
   bottom: 0;
-  left: 10%;
+  left: 20%;
 }
 
 .img {
@@ -37,4 +39,74 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
+  padding: 2rem;
+}
+
+.heading {
+  font-family: var(--primary-font);
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.name {
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.addrBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  min-width: 5rem;
+}
+
+.addrSpan {
+  display: flex;
+  justify-content: start;
+  font-family: var(--primary-font);
+  color: white;
+  gap: 1rem;
+}
+
+@media (width<1160px) {
+  .container {
+    flex-direction: column;
+    min-height: none;
+    margin-top: 5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .imgContainer {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (width<1160px) {
+  .imgContainer {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@media (width<690px) {
+  .left {
+    display: none;
+  }
+  .right {
+    background-image: url("/assets/addressImgOpacity.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
 }
