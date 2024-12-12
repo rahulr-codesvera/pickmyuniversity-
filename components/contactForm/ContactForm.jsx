@@ -8,15 +8,16 @@ import React, {
 } from "react";
 import Image from "next/image";
 import styles from "./ContactForm.module.css";
-import { useFormStatus } from "react-dom";
 import { handleSubmission } from "@/lib/actions";
 import { TiTick } from "react-icons/ti";
 
 const ContactForm = () => {
   const [state, formAction] = useActionState(handleSubmission, undefined);
   const [formElement, setFormElement] = useState(null);
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e) => {
+    setSending(true);
     e.preventDefault();
     const formData = new FormData(e.target);
     grecaptcha.ready(() => {
@@ -30,20 +31,13 @@ const ContactForm = () => {
             formAction(formData);
           });
           setFormElement(e.target);
+          setSending(false);
         })
         .catch((err) => {
+          setSending(false);
           return null;
         });
     });
-
-    // grecaptcha.ready(function() {
-    //   grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'}).then(function(token) {
-    //     formData.append("token", token);
-    //     startTransition(() => {
-    //       formAction(formData);
-    //     });
-    //     setFormElement(e.target);
-    //   }).catch()
   };
 
   useEffect(() => {
@@ -150,7 +144,13 @@ const ContactForm = () => {
           <p className={styles.errorMsg}>{getErrorMessage("message")}</p>
         )}
         <div className={styles.submission}>
-          <SubmitButton />
+          <button
+            type="submit"
+            className={styles.formSubmit}
+            disabled={sending}
+          >
+            {sending ? "Submitting..." : "Submit"}
+          </button>
           {state?.success && (
             <span className={styles.successMsg}>
               <TiTick size={20} />
@@ -163,20 +163,6 @@ const ContactForm = () => {
         </div>
       </form>
     </div>
-  );
-};
-
-const SubmitButton = () => {
-  const status = useFormStatus();
-
-  return (
-    <button
-      type="submit"
-      className={styles.formSubmit}
-      disabled={status.pending}
-    >
-      {status.pending ? "Submitting..." : "Submit"}
-    </button>
   );
 };
 
