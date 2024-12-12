@@ -1,21 +1,61 @@
 "use client";
 
-import React, { startTransition, useActionState, useEffect } from "react";
+import React, {
+  startTransition,
+  useActionState,
+  useEffect,
+  useState,
+} from "react";
 import Image from "next/image";
 import styles from "./ContactForm.module.css";
 import { useFormStatus } from "react-dom";
 import { handleSubmission } from "@/lib/actions";
+import { TiTick } from "react-icons/ti";
 
 const ContactForm = () => {
   const [state, formAction] = useActionState(handleSubmission, undefined);
+  const [formElement, setFormElement] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    formData.append("token", "sampleToken123");
-    startTransition(() => {
-      formAction(formData);
+    grecaptcha.ready(() => {
+      grecaptcha
+        .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {
+          action: "submit",
+        })
+        .then((token) => {
+          formData.append("token", token);
+          startTransition(() => {
+            formAction(formData);
+          });
+          setFormElement(e.target);
+        })
+        .catch((err) => {
+          return null;
+        });
     });
+
+    // grecaptcha.ready(function() {
+    //   grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'}).then(function(token) {
+    //     formData.append("token", token);
+    //     startTransition(() => {
+    //       formAction(formData);
+    //     });
+    //     setFormElement(e.target);
+    //   }).catch()
+  };
+
+  useEffect(() => {
+    if (state?.success === true && formElement) {
+      formElement.reset();
+      setFormElement(null);
+    }
+  }, [state?.success, formElement]);
+
+  const getErrorMessage = (field) => {
+    const error = state?.errors?.find((err) => err.field === field);
+    return error ? error.message : null;
   };
 
   return (
@@ -33,36 +73,58 @@ const ContactForm = () => {
       </h3>
       <form className={styles.form} onSubmit={handleSubmit} id="contactForm">
         <section className={styles.formSection}>
-          <input
-            className={styles.input}
-            type="text"
-            name="fullName"
-            placeholder="Full Name"
-            required
-          />
-          <input
-            className={styles.input}
-            type="tel"
-            name="phoneNumber"
-            placeholder="Phone Number"
-            required
-          />
+          <section className={styles.inputInnerSection}>
+            <input
+              className={styles.input}
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              required
+            />
+            {getErrorMessage("fullName") && (
+              <p className={styles.errorMsg}>{getErrorMessage("fullName")}</p>
+            )}
+          </section>
+          <section className={styles.inputInnerSection}>
+            <input
+              className={styles.input}
+              type="tel"
+              name="phoneNumber"
+              placeholder="Phone Number"
+              required
+            />
+            {getErrorMessage("phoneNumber") && (
+              <p className={styles.errorMsg}>
+                {getErrorMessage("phoneNumber")}
+              </p>
+            )}
+          </section>
         </section>
         <section className={styles.formSection}>
-          <input
-            className={styles.input}
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          <input
-            className={styles.input}
-            type="number"
-            name="budget"
-            placeholder="Your Budget (in Rs.)"
-            required
-          />
+          <section className={styles.inputInnerSection}>
+            <input
+              className={styles.input}
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />{" "}
+            {getErrorMessage("email") && (
+              <p className={styles.errorMsg}>{getErrorMessage("email")}</p>
+            )}
+          </section>
+          <section className={styles.inputInnerSection}>
+            <input
+              className={styles.input}
+              type="number"
+              name="budget"
+              placeholder="Your Budget (in Rs.)"
+              required
+            />
+            {getErrorMessage("budget") && (
+              <p className={styles.errorMsg}>{getErrorMessage("budget")}</p>
+            )}
+          </section>
         </section>
         <select
           className={styles.select}
@@ -75,15 +137,29 @@ const ContactForm = () => {
           <option value="Georgia">Georgia</option>
           <option value="Kyrgyzstan">Kyrgyzstan</option>
         </select>
+        {getErrorMessage("country") && (
+          <p className={styles.errorMsg}>{getErrorMessage("country")}</p>
+        )}
         <textarea
           className={styles.textArea}
           name="message"
           placeholder="Your Message"
           maxLength={1500}
-        ></textarea>
+        />
+        {getErrorMessage("message") && (
+          <p className={styles.errorMsg}>{getErrorMessage("message")}</p>
+        )}
         <div className={styles.submission}>
           <SubmitButton />
-          {state?.msg && <span>{state?.msg}</span>}
+          {state?.success && (
+            <span className={styles.successMsg}>
+              <TiTick size={20} />
+              <p>{state?.msg}</p>
+            </span>
+          )}
+          {state?.captchaError && (
+            <p className={styles.errorMsg}>Something went wrong! Try again.</p>
+          )}
         </div>
       </form>
     </div>

@@ -39,6 +39,25 @@
   display: flex;
   gap: 1rem;
 }
+.inputInnerSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.errorMsg {
+  color: red;
+  font-family: var(--secondary-font);
+  font-size: 0.8rem;
+}
+
+.successMsg {
+  display: flex;
+  align-items: center;
+  color: green;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+}
 
 .input {
   background-color: #ffeacc;
@@ -103,5 +122,12 @@
   .formContainer {
     width: 100%;
     min-width: 10rem;
+  }
+  .submission {
+    flex-direction: column;
+  }
+  .errorMsg,
+  .successMsg {
+    font-size: 0.7rem;
   }
 }
