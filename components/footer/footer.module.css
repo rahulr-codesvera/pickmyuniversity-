@@ -1,0 +1,71 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  padding: var(--padding-y) var(--padding-x);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 3fr;
+  width: 100%;
+  gap: 2rem;
+  height: 60vh;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.countries {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.country {
+  color: #2d3a5b;
+  font-family: var(--secondary-font);
+  margin-bottom: 0.5rem;
+}
+
+.socialSpan {
+  color: #2d3a5b;
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  font-family: var(--secondary-font);
+  font-weight: 400;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgb(132, 132, 132);
+  border-radius: 10px;
+}
+
+.copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: var(--primary-font);
+  color: #536288;
+  padding: 1rem;
+}
+
+.codesvera {
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+@media (width<1010px) {
+  .container {
+    height: fit-content;
+  }
+}

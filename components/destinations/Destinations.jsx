@@ -21,15 +21,15 @@ const Destinations = () => {
           world-class education meets affordability and cultural diversity.{" "}
         </p>
         <div className={styles.linksContainer}>
-          <Link className={styles.countryLink} href="/russia">
+          <Link className={styles.countryLink} href="/countries/russia">
             <p>Russia</p>
             <CgArrowRight />
           </Link>
-          <Link className={styles.countryLink} href="/georgia">
+          <Link className={styles.countryLink} href="/countries/georgia">
             <p>Georgia</p>
             <CgArrowRight />
           </Link>
-          <Link className={styles.countryLink} href="/kyrgyzstan">
+          <Link className={styles.countryLink} href="/countries/kyrgyzstan">
             <p>Kyrgyzstan</p>
             <CgArrowRight />
           </Link>
