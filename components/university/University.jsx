@@ -46,7 +46,7 @@ const University = ({ university }) => {
             />
           </div>
           <div className={styles.rectorsMsgContent}>
-            <h4 className={styles.rectorsHeading}>Rector's Message</h4>
+            <h4 className={styles.rectorsHeading}>Rector&apos;s Message</h4>
             <p className={styles.rectorsMsgText}>{university.rectorsMsg}</p>
           </div>
         </div>
