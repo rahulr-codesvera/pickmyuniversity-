@@ -16,6 +16,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "OpenSans";
+  src: url("./fonts/OpenSans.woff2") format("woff");
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -51,6 +58,7 @@
     );
     --primary-font: "Clash", sans-serif;
     --secondary-font: "Inter", sans-serif;
+    --nav-font: "OpenSans", sans-serif;
     --heading-size: 3rem;
     --heading-weight: 600;
     --padding-x: 8rem;

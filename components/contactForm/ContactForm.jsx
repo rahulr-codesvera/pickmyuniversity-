@@ -12,12 +12,15 @@ import { handleSubmission } from "@/lib/actions";
 import { TiTick } from "react-icons/ti";
 
 const ContactForm = () => {
-  const [state, formAction] = useActionState(handleSubmission, undefined);
+  const [state, formAction, pending] = useActionState(
+    handleSubmission,
+    undefined
+  );
   const [formElement, setFormElement] = useState(null);
-  const [sending, setSending] = useState(false);
+  // const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e) => {
-    setSending(true);
+    // setSending(true);
     e.preventDefault();
     const formData = new FormData(e.target);
     grecaptcha.ready(() => {
@@ -31,10 +34,10 @@ const ContactForm = () => {
             formAction(formData);
           });
           setFormElement(e.target);
-          setSending(false);
+          // setSending(false);
         })
         .catch((err) => {
-          setSending(false);
+          // setSending(false);
           return null;
         });
     });
@@ -147,9 +150,9 @@ const ContactForm = () => {
           <button
             type="submit"
             className={styles.formSubmit}
-            disabled={sending}
+            disabled={pending}
           >
-            {sending ? "Submitting..." : "Submit"}
+            {pending ? "Submitting..." : "Submit"}
           </button>
           {state?.success && (
             <span className={styles.successMsg}>

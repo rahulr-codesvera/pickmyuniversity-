@@ -11,6 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import styles from "./navbar.module.css";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -40,32 +41,47 @@ const Navbar = () => {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className={styles.navItem}>
-                Countries
+              <NavigationMenuTrigger>
+                <p className={styles.navItem}>Countries</p>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
                       <Link
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        className="flex min-h-40 h-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md relative"
                         href="/"
                       >
-                        <h2>Logo</h2>
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          shadcn/ui
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          Beautifully designed components that you can copy and
-                          paste into your apps. Accessible. Customizable. Open
-                          Source.
-                        </p>
+                        <Image
+                          className="object-contain"
+                          src="/assets/navmenuImg.png"
+                          alt="pick my university"
+                          fill
+                        />
                       </Link>
                     </NavigationMenuLink>
                   </li>
-                  <h2>link 1</h2>
-                  <h2>link 2</h2>
-                  <h2>link 3</h2>
+                  <Link className={styles.navLinkBox} href="/countries/russia">
+                    <p className={styles.navLinkTitle}>Russia</p>
+                    <p className={styles.navLinkDesc}>
+                      Explore 8 Premier Medical Universities
+                    </p>
+                  </Link>
+                  <Link className={styles.navLinkBox} href="/countries/georgia">
+                    <p className={styles.navLinkTitle}>Georgia</p>
+                    <p className={styles.navLinkDesc}>
+                      Explore 6 Premier Medical Universities
+                    </p>
+                  </Link>
+                  <Link
+                    className={styles.navLinkBox}
+                    href="/countries/kyrgyzstan"
+                  >
+                    <p className={styles.navLinkTitle}>Kyrgyzstan</p>
+                    <p className={styles.navLinkDesc}>
+                      Explore 2 Premier Medical Universities
+                    </p>
+                  </Link>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>

@@ -26,6 +26,25 @@ const University = ({ university }) => {
           <div className={styles.uniId}>{university.id + 1}</div>
           <h4 className={styles.uniName}>{university.name}</h4>
         </div>
+        {university.socials && (
+          <div className={styles.socials}>
+            {university.socials.map((item) => (
+              <a
+                className={styles.socialLink}
+                key={item.id}
+                href={item.link}
+                target="_blank"
+              >
+                <img
+                  className={styles.icon}
+                  src={item.imgUrl}
+                  alt={item.name}
+                />
+                <p>{item.name}</p>
+              </a>
+            ))}
+          </div>
+        )}
         <div
           className={styles.aboutUni}
           style={{ background: `url(${university.imgUrl})` }}
@@ -46,10 +65,19 @@ const University = ({ university }) => {
             />
           </div>
           <div className={styles.rectorsMsgContent}>
-            <h4 className={styles.rectorsHeading}>Rector&apos;s Message</h4>
-            <p className={styles.rectorsMsgText}>{university.rectorsMsg}</p>
+            <h4 className={styles.rectorsHeading}>
+              {university.featuredTitle}
+            </h4>
+            <p className={styles.rectorsMsgText}>{university.featuredMsg}</p>
           </div>
         </div>
+      </div>
+      <div className={styles.contentBoxes}>
+        {university.contentBox.map((item) => (
+          <div key={item.id} className={styles.contentBox}>
+            <p className={styles.contentBoxTitle}> {item.title}</p>
+          </div>
+        ))}
       </div>
       <div className={styles.highlights}>
         <h4 className={styles.rectorsHeading}>Highlights</h4>

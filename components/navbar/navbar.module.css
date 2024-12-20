@@ -17,13 +17,39 @@
 }
 .navItem {
   margin: 0 1rem;
+  font-family: var(--nav-font);
+  font-size: 1rem;
+  font-weight: 400;
 }
+
 .button {
   background: var(--gradient-bg);
   background: var(--gradient);
   padding: 1rem 2rem;
   font-family: var(--primary-font);
   font-weight: 500;
+}
+
+.navLinkBox {
+  height: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: rgba(230, 230, 230, 0.475);
+}
+
+.navLinkBox:hover {
+  background: var(--gradient);
+}
+
+.navLinkTitle {
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+}
+
+.navLinkDesc {
+  font-family: var(--secondary-font);
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.688);
 }
 
 @media (width<1010px) {
