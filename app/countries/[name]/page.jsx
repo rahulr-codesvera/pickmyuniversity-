@@ -35,7 +35,7 @@ const Page = () => {
   if (!country || !selectedUni) {
     return (
       <div className="h-[60vh] w-full flex items-center justify-center">
-        <p className={styles.errMsg}>Something went wrong!</p>
+        <p className={styles.errMsg}>Please wait!</p>
       </div>
     );
   }

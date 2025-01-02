@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -12,8 +12,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import styles from "./navbar.module.css";
 import Image from "next/image";
+import { RiMenu3Line } from "react-icons/ri";
+import { MdClose } from "react-icons/md";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.container}>
       <div className={styles.navbarContainer}>
@@ -89,7 +92,78 @@ const Navbar = () => {
         </NavigationMenu>
         <button className={styles.button}>Contact Us</button>
       </div>
-      <div className={styles.mobNav}></div>
+      <div className={styles.mobNav}>
+        <RiMenu3Line size={40} />
+        <button onClick={() => setIsOpen(true)}>
+          <RiMenu3Line size={40} />
+        </button>
+        <div
+          onClick={() => setIsOpen(false)}
+          className={`${isOpen ? styles.overlay : styles.overlayHidden}`}
+        ></div>
+        <div
+          className={`${styles.sideBar} ${isOpen ? styles.sideBarOpen : ""}`}
+        >
+          <div className="w-full flex justify-end px-4 py-5">
+            <button onClick={() => setIsOpen(false)}>
+              <MdClose size={40} />
+            </button>
+          </div>
+          <ul className="px-6 flex flex-col gap-2">
+            <li className={styles.mobNavElement}>
+              <Link onClick={() => setIsOpen(false)} href="/">
+                Home
+              </Link>
+            </li>
+            <li
+              onClick={() => setIsOpen(false)}
+              className={styles.mobNavElement}
+            >
+              About
+            </li>
+            <li
+              onClick={() => setIsOpen(false)}
+              className={styles.mobNavElement}
+            >
+              Services
+            </li>
+            <li
+              onClick={() => setIsOpen(false)}
+              className={styles.mobNavElement}
+            >
+              Gallery
+            </li>
+            <figure className="flex flex-col gap-2">
+              <figcaption className={styles.mobNavElement}>
+                Countries
+              </figcaption>
+              <ul className="flex flex-col gap-1 ">
+                <Link
+                  onClick={() => setIsOpen(false)}
+                  className={styles.mobNavCountry}
+                  href="/countries/russia"
+                >
+                  Russia
+                </Link>
+                <Link
+                  onClick={() => setIsOpen(false)}
+                  className={styles.mobNavCountry}
+                  href="/countries/georgia"
+                >
+                  Georgia
+                </Link>
+                <Link
+                  onClick={() => setIsOpen(false)}
+                  className={styles.mobNavCountry}
+                  href="/countries/kyrgyzstan"
+                >
+                  Kyrgyzstan
+                </Link>
+              </ul>
+            </figure>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

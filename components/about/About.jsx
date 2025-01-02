@@ -34,10 +34,11 @@ const About = () => {
           Why choose Pick My University?
         </h3>
         <p className={styles.textContent}>
-          At Pick My University, we are dedicated to helping aspiring medical
-          professionals fulfill their dreams. With partnerships across top
-          universities in Georgia , Kyrgyzstan, and Russia, we ensure a smooth
-          and transparent admission process. Your success is our priority.
+          For over 8 years, we have guided aspiring students toward fulfilling
+          their MBBS dreams abroad, assisting 250+ students, especially from
+          Tamil Nadu. From university selection to visa guidance, we ensure
+          personalized support and a seamless transition, empowering students
+          with world-class education opportunities. Your success is our pride.
         </p>
         <button className={styles.button}>Contact Us</button>
         <div className={styles.statsBox}>

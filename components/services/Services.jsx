@@ -20,7 +20,7 @@ const Services = () => {
       iconAlt: "university selection",
       heading: "University Selection",
       content:
-        "Find the perfect MBBS program tailored to your goals and budget.",
+        "Our expert team helps you find the best MBBS programs tailored to your goals, with 25+ university tie-ups across Russia, Georgia, Philippines, Kyrgyzstan, Uzbekistan, and Europe.",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ const Services = () => {
       iconAlt: "travel and accomodation",
       heading: "Travel & Accomodation",
       content:
-        "Assistance with travel bookings and  secure housing near your university.",
+        "We handle your travel and stay arrangements, from flight bookings to finding safe accommodations, ensuring a hassle-free transition to your university—all services provided conveniently under one roof.",
     },
     {
       id: 3,
@@ -39,7 +39,8 @@ const Services = () => {
       iconUrl: "/assets/admissionSupportIcon.png",
       iconAlt: "admission support",
       heading: "Admission Support",
-      content: "Step-by-step guidance to ensure a smooth application process.",
+      content:
+        "We guide you through the admission process, ensuring a seat in top universities abroad. Services include application reviews, offer letters, and reliable admission assistance tailored to your needs.",
     },
     {
       id: 4,
@@ -49,7 +50,7 @@ const Services = () => {
       iconAlt: "visa processing",
       heading: "Visa Processing",
       content:
-        "Expert assistance to help you secure your student visa hassle-free.",
+        "We simplify visa processes by assisting with paperwork, immigration, and approvals, ensuring a smooth and hassle-free application experience handled efficiently by our expert team.",
     },
     {
       id: 5,
@@ -57,8 +58,39 @@ const Services = () => {
       alt: "academic guidance",
       iconUrl: "/assets/academicGuidanceIcon.png", // Add your icon URL
       iconAlt: "academic guidance",
-      heading: "Academic Guidance",
-      content: "Personalized support to help you excel in your MBBS journey.",
+      heading: "Pre-Departure Guidance",
+      content:
+        "Our pre-departure sessions cover cultural adjustments, financial management, and university tips, ensuring you adapt smoothly and transition effortlessly to life abroad.",
+    },
+    {
+      id: 6,
+      url: "/assets/onCampusAssistance.jpg", // Add your image URL
+      alt: "on-campus assistance",
+      iconUrl: "/assets/universitySelectionIcon.png", // Add your icon URL
+      iconAlt: "on-campus assistance",
+      heading: "On-Campus Assistance",
+      content:
+        "From airport pickups to settling into your accommodation, we ensure you feel supported even after you’ve reached your destination. Our team remains accessible for any assistance you may need.",
+    },
+    {
+      id: 7,
+      url: "/assets/loanFinancialGuidance.jpg", // Add your image URL
+      alt: "Loan & Financial Guidance",
+      iconUrl: "/assets/academicGuidanceIcon.png", // Add your icon URL
+      iconAlt: "Loan & Financial Guidance",
+      heading: "Loan & Financial Guidance",
+      content:
+        "We simplify obtaining educational loans for overseas education, helping secure the necessary funds so you can focus on your studies without the financial stress.",
+    },
+    {
+      id: 8,
+      url: "/assets/studentMentorship.jpg", // Add your image URL
+      alt: "Student Mentorship Programs",
+      iconUrl: "/assets/universitySelectionIcon.png", // Add your icon URL
+      iconAlt: "Student Mentorship Programs",
+      heading: "Student Mentorship Programs",
+      content:
+        "We simplify obtaining educational loans for overseas education, helping secure the necessary funds so you can focus on your studies without the financial stress.",
     },
   ];
   return (

@@ -14,6 +14,7 @@
   gap: 3rem;
   align-items: center;
   padding: var(--padding-y) var(--padding-y);
+  min-height: fit-content;
 }
 .uniNameBox {
   display: flex;
@@ -38,7 +39,7 @@
 }
 
 .aboutUni {
-  min-height: 80vh;
+  min-height: 50vh;
   width: 100%;
   position: relative;
   background-position: center;
@@ -48,6 +49,7 @@
   display: flex;
   align-items: flex-end;
   padding: 2rem;
+  background-repeat: no-repeat;
 }
 
 .overlay {
@@ -83,17 +85,20 @@
   margin-top: 3rem;
   display: flex;
   width: 100%;
-  height: 40vh;
+  /* height: 40vh; */
   gap: 3rem;
 }
 
 .rectorsImgBox {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 30vh;
   border-radius: 10px;
   overflow: hidden;
   flex: 1;
+}
+.rectorsImg {
+  object-fit: cover;
 }
 
 .rectorsMsgContent {
@@ -240,4 +245,59 @@
   font-size: 2rem;
   font-weight: 600;
   color: rgba(41, 60, 83, 0.681);
+}
+
+@media (width<1300px) {
+  .highlightCardText {
+    font-size: 1.8rem;
+  }
+}
+
+@media (width<900px) {
+  .aboutUni {
+    min-height: 50vh;
+  }
+  .rectorsMsgBox {
+    flex-direction: column;
+  }
+  .rectorsImgBox {
+    min-height: 30vh;
+  }
+  .contentBoxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contentBoxTitle {
+    font-size: 1rem;
+  }
+  .uniName {
+    font-size: 1.5rem;
+  }
+  .uniId {
+    font-size: 1.2rem;
+  }
+  .highlightCardText {
+    font-size: 2rem;
+  }
+  .highlightsBox {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width<600px) {
+  .contentBoxes {
+    grid-template-columns: 1fr;
+  }
+  .uniName {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .uniId {
+    font-size: 1rem;
+  }
+  .highlightCardTitle {
+    font-size: 0.8rem;
+  }
+  .highlightCardText {
+    font-size: 1.2rem;
+  }
 }

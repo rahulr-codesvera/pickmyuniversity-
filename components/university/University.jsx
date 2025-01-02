@@ -19,6 +19,26 @@ const University = ({ university }) => {
     "#FFE384",
     "#F5D4D8",
   ];
+  const faq = [
+    {
+      question:
+        "Which country is the best for studying MBBS abroad at low fees?",
+      answer: "Russia and Kyrgyzstan are some of the best options.",
+    },
+    {
+      question: "Can I pursue MBBS abroad within a budget of 20 lakhs?",
+      answer:
+        "Yes, it is possible to pursue an MBBS degree abroad within a budget of 20 lakhs, with universities offering fees starting as low as 2 lakhs per year.",
+    },
+    {
+      question: "What are the NEET marks required for MBBS abroad?",
+      answer: "The minimum qualifying marks in NEET are sufficient.",
+    },
+    {
+      question: "Can I study MBBS abroad with an education loan?",
+      answer: "Yes, education loans are available for studying MBBS abroad.",
+    },
+  ];
   return (
     <div className={styles.uniBox}>
       <div className={styles.container}>
@@ -103,8 +123,8 @@ const University = ({ university }) => {
       </div>
       <div className={styles.faqBox}>
         <Accordion type="single" collapsible className="w-full">
-          {university.faq.map((item) => (
-            <AccordionItem key={item.id} value={`item-${item.id}`}>
+          {faq.map((item, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger>{item.question}</AccordionTrigger>
               <AccordionContent>{item.answer}</AccordionContent>
             </AccordionItem>

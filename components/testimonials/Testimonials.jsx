@@ -9,11 +9,22 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import YouTubeThumbnail from "./YoutubeThumbnail";
 
 const Testimonials = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: false })
   );
+  const testimonials = [
+    "KHk31itlY3c",
+    "pQ8rSmztCf8",
+    "bFZAY1AS2Vo",
+    "UbTelSBTanw",
+    "KuFFJg6qg0k",
+    "SOjbgdaZwmw",
+    "w5KKqPKNIE8",
+    "3NyVT_IQ4K0",
+  ];
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -44,40 +55,41 @@ const Testimonials = () => {
           }}
         >
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+            {testimonials.map((item, index) => (
               <CarouselItem key={index}>
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex aspect-square items-center justify-center p-6">
                       <div className={styles.TestimonialsContainer}>
-                        <div className={styles.testimonialsTop}>
-                          <div className={styles.userImg}>
-                            <Image
-                              className={styles.userImage}
-                              src="/assets/user1.png"
-                              alt="testimonial"
-                              fill
-                            />
-                          </div>
-                          <div className={styles.userNameBox}>
-                            <h6 className={styles.userName}>John Doe</h6>
-                            <p className={styles.userInfo}>Company CEO</p>
-                          </div>
-                        </div>
-                        <div className={styles.rating}>
-                          <Image
-                            className={styles.stars}
-                            src="/assets/stars.png"
-                            alt="pick my university"
-                            fill
-                          />
-                        </div>
-                        <p className={styles.testimonialsContent}>
-                          &quot;I&apos;ve been consistently impressed with the
-                          quality of service provided by this website. They have
-                          exceeded my expectations and delivered exceptional
-                          results. Highly recommended!&quot;
-                        </p>
+                        {/* <div className={styles.testimonialsTop}>
+                                      <div className={styles.userImg}>
+                                        <Image
+                                          className={styles.userImage}
+                                          src="/assets/user1.png"
+                                          alt="testimonial"
+                                          fill
+                                        />
+                                      </div>
+                                      <div className={styles.userNameBox}>
+                                        <h6 className={styles.userName}>John Doe</h6>
+                                        <p className={styles.userInfo}>Company CEO</p>
+                                      </div>
+                                    </div>
+                                    <div className={styles.rating}>
+                                      <Image
+                                        className={styles.stars}
+                                        src="/assets/stars.png"
+                                        alt="pick my university"
+                                        fill
+                                      />
+                                    </div>
+                                    <p className={styles.testimonialsContent}>
+                                      &quot;I&apos;ve been consistently impressed with the
+                                      quality of service provided by this website. They have
+                                      exceeded my expectations and delivered exceptional
+                                      results. Highly recommended!&quot;
+                                    </p> */}
+                        <YouTubeThumbnail videoId={item} />
                       </div>
                     </CardContent>
                   </Card>
