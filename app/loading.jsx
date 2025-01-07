@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 
 const loading = () => {
-  return <div className={styles.container}>loading</div>;
+  return <div className={styles.container}>Loading...</div>;
 };
 
 export default loading;

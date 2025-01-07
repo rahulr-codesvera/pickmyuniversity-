@@ -43,10 +43,18 @@ const Page = () => {
   return (
     country && (
       <div className={styles.container}>
-        <div className={styles.banner}>
-          <h4 className={styles.countryName}>{country.name.toUpperCase()}</h4>
+        <div
+          className={styles.banner}
+          style={{
+            background: `url(${country.bannerImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className={styles.overlay}></div>
+          <h4 className={styles.countryName}>{country?.name.toUpperCase()}</h4>
           <div className={styles.btnContainer}>
-            {country.universities.map((item) => (
+            {country?.universities.map((item) => (
               <button
                 key={item.id}
                 className={

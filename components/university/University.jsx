@@ -67,7 +67,9 @@ const University = ({ university }) => {
         )}
         <div
           className={styles.aboutUni}
-          style={{ background: `url(${university.imgUrl})` }}
+          style={{
+            background: `url(${university.imgUrl})`,
+          }}
         >
           <div className={styles.overlay}></div>
           <div className={styles.aboutContent}>
