@@ -31,17 +31,26 @@ const Footer = () => {
         </div>
         <div className={styles.social}>
           <p className={styles.sectionTitle}>Social</p>
-          <span className={styles.socialSpan}>
+          {/* <span className={styles.socialSpan}>
             <FaFacebookSquare size={20} />
-            <a href="#">Facebook</a>
-          </span>
+            <a href="#" target="_blank">
+              Facebook
+            </a>
+          </span> */}
           <span className={styles.socialSpan}>
             <FaInstagramSquare size={20} />
-            <a href="https://www.instagram.com/pickmyuniversity/">Instagram</a>
+            <a
+              href="https://www.instagram.com/pickmyuniversity/"
+              target="_blank"
+            >
+              Instagram
+            </a>
           </span>
           <span className={styles.socialSpan}>
             <FaYoutube size={20} />
-            <a href="https://www.youtube.com/@PickMyUniversity">Youtube</a>
+            <a href="https://www.youtube.com/@PickMyUniversity" target="_blank">
+              Youtube
+            </a>
           </span>
         </div>
         <div className={styles.map}>

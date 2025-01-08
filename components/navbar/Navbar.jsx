@@ -34,14 +34,14 @@ const Navbar = () => {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <a className={styles.navItem} href="/#about">
+              <Link className={styles.navItem} href="/#about">
                 About
-              </a>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <a className={styles.navItem} href="/#services">
+              <Link className={styles.navItem} href="/#services">
                 Services
-              </a>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link className={styles.navItem} href="/gallery">
@@ -131,13 +131,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={styles.mobNavElement}
             >
-              <a href="/#about">About</a>
+              <Link href="/#about">About</Link>
             </li>
             <li
               onClick={() => setIsOpen(false)}
               className={styles.mobNavElement}
             >
-              <a href="/#services">Services</a>
+              <Link href="/#services">Services</Link>
             </li>
             <li
               onClick={() => setIsOpen(false)}
