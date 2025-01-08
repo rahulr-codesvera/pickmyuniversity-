@@ -20,7 +20,12 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.navbarContainer}>
-        <h1>LOGO</h1>
+        <Image
+          src="/assets/logo.png"
+          alt="Pick My University"
+          width={80}
+          height={100}
+        />
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -29,12 +34,12 @@ const Navbar = () => {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <a className={styles.navItem} href="#about">
+              <a className={styles.navItem} href="/#about">
                 About
               </a>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <a className={styles.navItem} href="#services">
+              <a className={styles.navItem} href="/#services">
                 Services
               </a>
             </NavigationMenuItem>
@@ -90,10 +95,17 @@ const Navbar = () => {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <button className={styles.button}>Contact Us</button>
+        <Link className={styles.button} href="/">
+          Contact Us
+        </Link>
       </div>
       <div className={styles.mobNav}>
-        <RiMenu3Line size={40} />
+        <Image
+          src="/assets/logo.png"
+          alt="Pick My University"
+          width={60}
+          height={70}
+        />
         <button onClick={() => setIsOpen(true)}>
           <RiMenu3Line size={40} />
         </button>
@@ -119,46 +131,52 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={styles.mobNavElement}
             >
-              About
+              <a href="/#about">About</a>
             </li>
             <li
               onClick={() => setIsOpen(false)}
               className={styles.mobNavElement}
             >
-              Services
+              <a href="/#services">Services</a>
             </li>
             <li
               onClick={() => setIsOpen(false)}
               className={styles.mobNavElement}
             >
-              Gallery
+              <Link href="/gallery">Gallery</Link>
             </li>
             <figure className="flex flex-col gap-2">
               <figcaption className={styles.mobNavElement}>
                 Countries
               </figcaption>
-              <ul className="flex flex-col gap-1 ">
-                <Link
-                  onClick={() => setIsOpen(false)}
-                  className={styles.mobNavCountry}
-                  href="/countries/russia"
-                >
-                  Russia
-                </Link>
-                <Link
-                  onClick={() => setIsOpen(false)}
-                  className={styles.mobNavCountry}
-                  href="/countries/georgia"
-                >
-                  Georgia
-                </Link>
-                <Link
-                  onClick={() => setIsOpen(false)}
-                  className={styles.mobNavCountry}
-                  href="/countries/kyrgyzstan"
-                >
-                  Kyrgyzstan
-                </Link>
+              <ul className="flex flex-col gap-1 list-disc ml-8">
+                <li>
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    className={styles.mobNavCountry}
+                    href="/countries/russia"
+                  >
+                    Russia
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    className={styles.mobNavCountry}
+                    href="/countries/georgia"
+                  >
+                    Georgia
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    className={styles.mobNavCountry}
+                    href="/countries/kyrgyzstan"
+                  >
+                    Kyrgyzstan
+                  </Link>
+                </li>
               </ul>
             </figure>
           </ul>

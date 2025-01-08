@@ -34,9 +34,14 @@ function Gallery() {
 
   return (
     <div className={styles.galleryContainer}>
-      <LightGallery onInit={onInit} speed={500} plugins={[lgThumbnail, lgZoom]}>
+      <LightGallery
+        onInit={onInit}
+        speed={500}
+        plugins={[lgThumbnail, lgZoom]}
+        elementClassNames={styles.galleryGrid} // Add class for grid
+      >
         {images.map((image) => (
-          <a key={image.id} href={image.src} className="gallery-item">
+          <a key={image.id} href={image.src}>
             <img
               className={styles.galleryImg}
               alt={image.alt}
@@ -51,8 +56,13 @@ function Gallery() {
 
 const Page = () => {
   return (
-    <div>
-      <Gallery />
+    <div className={styles.container}>
+      <h2 className={styles.sectionHeading}>
+        A glimpse into your future journey
+      </h2>
+      <div className={styles.gridContainer}>
+        <Gallery />
+      </div>
     </div>
   );
 };

@@ -20,7 +20,7 @@ const About = () => {
     },
   ];
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <div className={styles.left}>
         <div className={styles.title}>
           <img

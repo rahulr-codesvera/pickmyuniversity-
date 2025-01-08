@@ -146,6 +146,23 @@ const ContactForm = () => {
         {getErrorMessage("message") && (
           <p className={styles.errorMsg}>{getErrorMessage("message")}</p>
         )}
+        <div className={styles.captchaText}>
+          This site is protected by reCAPTCHA and the Google{" "}
+          <a
+            className={styles.captchaLink}
+            href="https://policies.google.com/privacy"
+          >
+            Privacy Policy
+          </a>{" "}
+          and{" "}
+          <a
+            className={styles.captchaLink}
+            href="https://policies.google.com/terms"
+          >
+            Terms of Service
+          </a>{" "}
+          apply.
+        </div>
         <div className={styles.submission}>
           <button
             type="submit"

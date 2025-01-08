@@ -96,6 +96,16 @@
   font-size: 1rem;
 }
 
+.captchaText {
+  font-size: 0.8rem;
+  font-family: var(--secondary-font);
+  color: gray;
+}
+.captchaLink {
+  color: rgb(33, 148, 255);
+  text-decoration: underline;
+}
+
 @media (width<1200px) {
   .formContainer {
     width: 100%;

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./footer.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebookSquare, FaInstagramSquare, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -9,7 +10,12 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <h2>Logo</h2>
+          <Image
+            src="/assets/logo.png"
+            alt="Pick My University"
+            width={80}
+            height={100}
+          />
         </div>
         <div className={styles.countries}>
           <p className={styles.sectionTitle}>Countries</p>
@@ -31,11 +37,11 @@ const Footer = () => {
           </span>
           <span className={styles.socialSpan}>
             <FaInstagramSquare size={20} />
-            <a href="#">Instagram</a>
+            <a href="https://www.instagram.com/pickmyuniversity/">Instagram</a>
           </span>
           <span className={styles.socialSpan}>
             <FaYoutube size={20} />
-            <a href="#">Youtube</a>
+            <a href="https://www.youtube.com/@PickMyUniversity">Youtube</a>
           </span>
         </div>
         <div className={styles.map}>
