@@ -93,6 +93,46 @@ const University = ({ university }) => {
             <p className={styles.rectorsMsgText}>{university.featuredMsg}</p>
           </div>
         </div>
+        {university.feeStructure && (
+          <div className={styles.feeContainer}>
+            <h3 className={styles.rectorsHeading}>Fee Structure</h3>
+            <div className={styles.feeBox}>
+              <ul className="flex flex-col w-full rounded-2xl bg-[#a9d2fb] p-6 gap-4 md:gap-0">
+                {university.feeStructure.map((item, index) => (
+                  <li key={index} className={styles.feeListItem}>
+                    <p className={styles.key}>{item.year}:</p>
+                    <p className={styles.value}>{item.fee}</p>
+                  </li>
+                ))}
+              </ul>
+              {university.hostelFee && (
+                <ul className="flex flex-col w-full rounded-2xl bg-[#a9d2fb] p-6 gap-4 md:gap-0">
+                  {university.hostelFee.map((item, index) => (
+                    <li key={index} className={styles.feeListItem}>
+                      <p className={styles.key}>{item.key}:</p>
+                      <p className={styles.value}>{item.fee}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            {university.notes && (
+              <div className="flex flex-col gap-1">
+                <h3 className={styles.rectorsHeading}>Notes</h3>
+                <ul>
+                  {university.notes.map((item, index) => (
+                    <li key={index} className={styles.feeListItem}>
+                      <p className={styles.noteText}>
+                        <span className="mr-1">{index + 1}.</span>
+                        {item}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
       </div>
       <div className={styles.contentBoxes}>
         {university.contentBox.map((item) => (
