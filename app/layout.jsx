@@ -5,7 +5,7 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Pick My University",
-  description: "Study MBBS internationally-budget friendly",
+  description: "Study MBBS internationally budget-friendly",
 };
 
 export default function RootLayout({ children }) {
