@@ -10,6 +10,7 @@ import Image from "next/image";
 import styles from "./ContactForm.module.css";
 import { handleSubmission } from "@/lib/actions";
 import { TiTick } from "react-icons/ti";
+import { VscError } from "react-icons/vsc";
 
 const ContactForm = () => {
   const [state, formAction, pending] = useActionState(
@@ -174,6 +175,12 @@ const ContactForm = () => {
           {state?.success && (
             <span className={styles.successMsg}>
               <TiTick size={20} />
+              <p>{state?.msg}</p>
+            </span>
+          )}
+          {state?.error && (
+            <span className={styles.submissionError}>
+              <VscError size={20} />
               <p>{state?.msg}</p>
             </span>
           )}

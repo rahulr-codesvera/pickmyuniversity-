@@ -59,6 +59,14 @@
   font-size: 1rem;
 }
 
+.submissionError {
+  display: flex;
+  align-items: center;
+  color: red;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+}
+
 .input {
   background-color: #ffeacc;
   padding: 0.5rem;
