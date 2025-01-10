@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   const statsArray = [
@@ -40,7 +41,9 @@ const About = () => {
           personalized support and a seamless transition, empowering students
           with world-class education opportunities. Your success is our pride.
         </p>
-        <button className={styles.button}>Contact Us</button>
+        <Link className={styles.button} href="/">
+          Contact Us
+        </Link>
         <div className={styles.statsBox}>
           {statsArray.map((item) => (
             <div className={styles.stat} key={item.id}>

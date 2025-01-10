@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebookSquare, FaInstagramSquare, FaYoutube } from "react-icons/fa";
+import { FaInstagramSquare, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const date = new Date();

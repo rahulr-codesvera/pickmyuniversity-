@@ -95,7 +95,17 @@ const University = ({ university }) => {
         </div>
         {university.feeStructure && (
           <div className={styles.feeContainer}>
-            <h3 className={styles.rectorsHeading}>Fee Structure</h3>
+            <h3 className={styles.uniName}>Fee Structure</h3>
+            {university.feeImg && (
+              <div className={styles.feeImgContainer}>
+                <Image
+                  className={styles.feeImg}
+                  src={university.feeImg}
+                  alt="pick my university"
+                  fill
+                />
+              </div>
+            )}
             <div className={styles.feeBox}>
               <ul className="flex flex-col w-full rounded-2xl bg-[#a9d2fb] p-6 gap-4 md:gap-0">
                 {university.feeStructure.map((item, index) => (

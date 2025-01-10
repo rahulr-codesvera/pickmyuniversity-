@@ -41,7 +41,6 @@ const Address = () => {
         </div>
         <div className={styles.right}>
           <h5 className={styles.heading}>Head Office</h5>
-          <p className={styles.name}>Kaushik</p>
           <div className={styles.addrBox}>
             {addrSpanList.map((item) => (
               <span key={item.id} className={styles.addrSpan}>
