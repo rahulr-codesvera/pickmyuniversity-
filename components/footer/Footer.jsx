@@ -13,9 +13,26 @@ const Footer = () => {
           <Image
             src="/assets/logo.png"
             alt="Pick My University"
-            width={80}
-            height={100}
+            width={100}
+            height={120}
           />
+          <div>
+            <ul className={styles.address}>
+              <li>
+                <p>
+                  317, VPM Plaza, 80 Feet Rd, Anna Nagar,
+                  <br />
+                  Madurai, Tamil Nadu 625020
+                </p>
+              </li>
+              <li>
+                <p>Phone: 9994058803, 9384374741</p>
+              </li>
+              <li>
+                <p>Email : pickmyuniversity@gmail.com</p>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className={styles.countries}>
           <p className={styles.sectionTitle}>Countries</p>
@@ -31,12 +48,6 @@ const Footer = () => {
         </div>
         <div className={styles.social}>
           <p className={styles.sectionTitle}>Social</p>
-          {/* <span className={styles.socialSpan}>
-            <FaFacebookSquare size={20} />
-            <a href="#" target="_blank">
-              Facebook
-            </a>
-          </span> */}
           <span className={styles.socialSpan}>
             <FaInstagramSquare size={20} />
             <a
@@ -52,6 +63,41 @@ const Footer = () => {
               Youtube
             </a>
           </span>
+        </div>
+        <div className={styles.mobMiddleMenu}>
+          <div className={styles.mobCountries}>
+            <p className={styles.sectionTitle}>Countries</p>
+            <Link className={styles.country} href="/countries/russia">
+              Russia
+            </Link>
+            <Link className={styles.country} href="/countries/georgia">
+              Georgia
+            </Link>
+            <Link className={styles.country} href="/countries/kyrgyzstan">
+              Kyrgyzstan
+            </Link>
+          </div>
+          <div className={styles.mobSocial}>
+            <p className={styles.sectionTitle}>Social</p>
+            <span className={styles.socialSpan}>
+              <FaInstagramSquare size={20} />
+              <a
+                href="https://www.instagram.com/pickmyuniversity/"
+                target="_blank"
+              >
+                Instagram
+              </a>
+            </span>
+            <span className={styles.socialSpan}>
+              <FaYoutube size={20} />
+              <a
+                href="https://www.youtube.com/@PickMyUniversity"
+                target="_blank"
+              >
+                Youtube
+              </a>
+            </span>
+          </div>
         </div>
         <div className={styles.map}>
           <iframe
