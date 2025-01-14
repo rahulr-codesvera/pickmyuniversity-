@@ -63,6 +63,16 @@
     padding: 1.5rem 1rem;
     position: relative;
   }
+  .mobNavLogo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logoName {
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
   .overlay {
     position: fixed;
     height: 100vh;
@@ -109,5 +119,12 @@
     font-size: 1.2rem;
     font-family: var(--secondary-font);
     margin-left: 0.5rem;
+  }
+}
+
+@media (width<500px) {
+  .logoName {
+    font-size: 1rem;
+    font-weight: 500;
   }
 }

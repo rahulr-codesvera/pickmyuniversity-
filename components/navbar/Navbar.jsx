@@ -100,12 +100,15 @@ const Navbar = () => {
         </Link>
       </div>
       <div className={styles.mobNav}>
-        <Image
-          src="/assets/logo.png"
-          alt="Pick My University"
-          width={60}
-          height={70}
-        />
+        <div className={styles.mobNavLogo}>
+          <Image
+            src="/assets/logo.png"
+            alt="Pick My University"
+            width={60}
+            height={70}
+          />
+          <h3 className={styles.logoName}>Pick My University</h3>
+        </div>
         <button onClick={() => setIsOpen(true)}>
           <RiMenu3Line size={40} />
         </button>

@@ -353,6 +353,11 @@
   .highlightCardText {
     font-size: 1.2rem;
   }
+  .feeImgContainer {
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+  }
 }
 
 @media (width<450px) {
